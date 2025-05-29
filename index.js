@@ -68,8 +68,9 @@ function saveInput() {
 
 inputBtn.addEventListener("click", saveInput);
 
-inputEl.addEventListener("keydown", function(event) {
+inputEl.addEventListener("keydown", (event) => {
     if (event.key === "Enter") {
+        event.preventDefault();
         saveInput();
     }
 });
