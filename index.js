@@ -43,9 +43,9 @@ deleteBtn.addEventListener("dblclick", function() {
 })
 
 onValue(referenceInDB, function(snapshot){
-    const isSnapshotExit = snapshot.exists()
+    const isSnapshotExits = snapshot.exists()
 
-    if (isSnapshotExit){
+    if (isSnapshotExits){
         const leads = Object.values(snapshot.val())
         console.log(leads)
         render(leads)
@@ -56,17 +56,16 @@ onValue(referenceInDB, function(snapshot){
     
 })
 
-function saveInput() {
+inputBtn.addEventListener("click", function saveInput() {
     const inputValue = inputEl.value.trim();
+    
     if (inputValue !== "") {
         push(referenceInDB, inputValue);
         inputEl.value = "";
     } else{
         console.log("Enter shopping list item name!")
     }
-}
-
-inputBtn.addEventListener("click", saveInput);
+});
 
 inputEl.addEventListener("keydown", (event) => {
     if (event.key === "Enter") {
