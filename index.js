@@ -61,6 +61,8 @@ function saveInput() {
     if (inputValue !== "") {
         push(referenceInDB, inputValue);
         inputEl.value = "";
+    } else{
+        console.log("Enter shopping list item name!")
     }
 }
 
