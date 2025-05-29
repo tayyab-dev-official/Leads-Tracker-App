@@ -56,6 +56,22 @@ onValue(referenceInDB, function(snapshot){
     
 })
 
+function saveInput() {
+    const inputValue = inputEl.value.trim();
+    if (inputValue !== "") {
+        push(referenceInDB, inputValue);
+        inputEl.value = "";
+    }
+}
+
+inputBtn.addEventListener("click", saveInput);
+
+inputEl.addEventListener("keydown", function(event) {
+    if (event.key === "Enter") {
+        saveInput();
+    }
+});
+
 inputBtn.addEventListener("click", function() {
     push(referenceInDB, inputEl.value)
     inputEl.value = ""
