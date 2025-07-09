@@ -1,12 +1,14 @@
 body {
+    background-color: green;
     margin: 0 auto;
     padding: 10px;
     font-family: Arial, Helvetica, sans-serif;
     max-width: 302px;
+    color: white;
 }
 
 label{
-    color: #5f9341;
+    color: white1;
     font-weight: 900;
 }
 
@@ -19,7 +21,7 @@ input {
 }
 
 button {
-    background: #5f9341;
+    background: red;
     color: white;
     padding: 10px 20px;
     border: 1px solid #5f9341;
@@ -27,7 +29,7 @@ button {
 }
 
 #delete-btn {
-    background: white;
+    background: yellow;
     color: #5f9341;
 }
 
@@ -42,7 +44,7 @@ li {
 }
 
 a {
-    color: #5f9341;
+    color: white;
 }
 
 
